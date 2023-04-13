@@ -45,6 +45,10 @@ li {
     margin-left: 25px;
 }
 
+.redinterp {
+    color: rgb(180, 31, 24);
+}
+
 a.classiclink {
     color: #000000;
 }
@@ -142,7 +146,6 @@ section#nav #uppernav .split p {
     display: inline-block;
     margin-right: 15px;
     padding: 6px 10px 6px 10px;
-    text-decoration: underline;
     cursor: pointer;
     font-size: 0.8rem;
     color: white;
@@ -600,8 +603,8 @@ section .portcontenttitle {
 }
 
 section .portcontenttitle .item {
-    display: inline-flex;
     padding: 5px 10px;
+    display: inline-flex;
 }
 
 section .portcontenttitle .item h3 {
@@ -909,7 +912,8 @@ section#footer .footerlinks a {
 }
 
 section#footer .footerlinks a:not(:last-child):after,
-section#footer .copyright:after {
+section#footer .copyright:after,
+section#footer .disclaimer:after {
     content: '·';
     text-decoration: none;
     color: white;
@@ -917,7 +921,6 @@ section#footer .copyright:after {
 }
 
 section#footer .copyright {
-    margin-top: 30px;
     color: white;
     display: inline-block;
 }
@@ -936,6 +939,7 @@ section#footer .disclaimerparent {
 section#footer .disclaimer {
     font-style: italic;
     color: white;
+    display: inline;
 }
 
 
@@ -1086,7 +1090,7 @@ section#top .hero .arrow .svg {
     }
 
     section#top .hero .logo .full {
-        margin-top: 10px;
+        margin-top: 20px;
         text-align: center;
     }
 
@@ -1096,7 +1100,7 @@ section#top .hero .arrow .svg {
 
     section#top .hero .logo .full .smaller {
         font-size: 35px;
-        margin-top: 5px;
+        margin-top: 15px;
         display: block;
     }
 
@@ -1128,9 +1132,23 @@ section#top .hero .arrow .svg {
     section.content .block svg {
         height: 30px;
     }
+
+    section .portcontenttitle {
+        width: 85%;
+        display: block;
+        margin: 10px auto;
+    }
+    
+    section .portcontenttitle .item {
+        display: flex;
+    }
 }
 
 @media only screen and (max-width: 768px) {
+    section.content:first-of-type {
+        margin-top: 120px;
+    }
+
     section.content .widthcontrol {
         padding: 0 15px;
     }
@@ -1221,16 +1239,18 @@ section#top .hero .arrow .svg {
 
     section#footer .copyright,
     section#footer .icp {
+        margin-top: 5px;
         display: block;
         font-size: 0.8em;
         text-align: center;
     }
 
-    section#footer .icp {
-        margin-top: 10px;
+    section#footer .copyright {
+        margin-top: 15px;
     }
 
-    section#footer .copyright:after {
+    section#footer .copyright:after,
+    section#footer .disclaimer:after {
         content: '';
         display: none;
     }
